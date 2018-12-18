@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+
+        <ion-item>
+          <ion-label floating>Name</ion-label>
+          <ion-input type="text" #name ></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" #email></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Phone</ion-label>
+            <ion-input type="number" #phone></ion-input>
+          </ion-item>
+      
+      </ion-list>
+  <button ion-button (click)="sendPostRequest(name.value,email.value,phone.value)">Post Data</button>
+</ion-content>
